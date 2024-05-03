@@ -5,4 +5,5 @@ import jakarta.persistence.Entity;
 @Entity
 public class Student {
     private String studentId;
+    private String studentName;
 }
