@@ -12,12 +12,12 @@ public class Subject {
     private Long subjectId;
     @Column(nullable = false)
     private String subjectName;
-    @Column(nullable = false)
-    private String teacherName;
+    private String teacherName; //nullable 조건 삭제
     private String classRoom;
     @Enumerated(EnumType.STRING)
     private Week day;
     private LocalTime startTime;
+    private LocalTime endTime;
     private int maxStudent;
     private int credit;
 
