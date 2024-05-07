@@ -8,8 +8,8 @@ import java.util.List;
 
 @Data
 public class StudentDto {
-    private String studentId;
-    private String studentName;
+    private Long id;
+    private String name;
     private String birth;
     private String address;
     private String phone;
@@ -20,19 +20,19 @@ public class StudentDto {
     private List<GradeDto> gradeDtoList;
     private List<SubjectDto> subjectDtoList;
 
-    public StudentDto(String studentId, String studentName, String birth, String address,
+    public StudentDto(Long id, String studentName, String birth, String address,
                       String phone, String dept, LocalDate entranceDate, LocalDate graduateDate) {
     }
 
     public static StudentDto fromStudentEntity(Student student){
-        return new StudentDto(student.getStudentId(), student.getStudentName(), student.getBirth(), student.getAddress(),
+        return new StudentDto(student.getId(), student.getName(), student.getBirth(), student.getAddress(),
                 student.getPhone(), student.getDept(), student.getEntranceDate(), student.getGraduateDate());
     }
 
     public static Student fromStudentDto(StudentDto studentDto){
         Student student = new Student();
-        student.setStudentId(studentDto.getStudentId());
-        student.setStudentName(studentDto.getStudentName());
+        student.setId(studentDto.getId());
+        student.setName(studentDto.getName());
         student.setBirth(studentDto.getBirth());
         student.setAddress(studentDto.getAddress());
         student.setPhone(studentDto.getPhone());

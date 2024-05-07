@@ -8,9 +8,12 @@ import lombok.Data;
 public class Apply {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long no;
+    @Column(name = "apply_id")
+    private Long id;
+
     @Column(nullable = false)
     private String studentId;
+
     @Column(nullable = false)
     private Long subjectId;
 }

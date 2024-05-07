@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>학생 목록</title>
+    <!-- 부트스트랩 CSS 링크 -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <!-- 커스텀 CSS 파일 링크 -->
+    <link rel="stylesheet" href="path/to/custom.css">
+</head>
+<body>
+
+<div class="container mt-5">
+    <h2>학생 목록</h2>
+    <table class="table">
+        <thead>
+        <tr>
+            <th>학번/교번</th>
+            <th>이름</th>
+            <th>수정</th> <!-- 수정 버튼 추가 -->
+            <!-- 다른 필드에 대한 헤더를 필요에 따라 추가할 수 있습니다 -->
+        </tr>
+        </thead>
+        <tbody>
+        <!-- 학생 목록을 동적으로 표시 -->
+        <!-- Thymeleaf를 사용하여 데이터를 바인딩할 수 있습니다 -->
+        <tr th:each="student : ${students}">
+            <td th:text="${student.id}">학번</td>
+            <td th:text="${student.name}">이름</td>
+            <td>
+                <!-- 수정 버튼 -->
+                <a th:href="@{/students/{studentId}/edit(studentId=${student.id})}" class="btn btn-primary btn-sm">수정</a>
+            </td>
+            <!-- 다른 필드에 대한 데이터를 표시할 수 있습니다 -->
+        </tr>
+        </tbody>
+    </table>
+</div>
+
+<!-- 부트스트랩 JS 및 필요한 스크립트 링크 -->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+</body>
+</html>

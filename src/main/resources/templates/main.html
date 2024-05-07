@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Main Content</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- 부트스트랩 CSS 링크 -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <!-- 커스텀 CSS 파일 링크 -->
+    <link rel="stylesheet" href="path/to/custom.css">
+</head>
+<body>
+
+<!-- Include Header -->
+<include src="header.html"></include>
+
+<!-- Main Content -->
+<div class="container mt-5">
+    <div class="row">
+        <div class="col-md-6">
+            <h1>Main Content</h1>
+            <!-- 학생 등록 버튼 -->
+            <button id="studentFormBtn" class="btn btn-primary mr-2">학생 등록</button>
+            <!-- 학생 목록 버튼 -->
+            <button id="studentListBtn" class="btn btn-secondary">학생 목록</button>
+        </div>
+    </div>
+</div>
+
+<!-- Include Footer -->
+<include src="footer.html"></include>
+
+<!-- 부트스트랩 JS 및 필요한 스크립트 링크 -->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+<script>
+    // 학생 등록 버튼 클릭 시 학생 등록 폼으로 이동
+    document.getElementById('studentFormBtn').addEventListener('click', function() {
+        location.href = "/students/new";
+    });
+
+    // 학생 목록 버튼 클릭 시 학생 목록 페이지로 이동
+    document.getElementById('studentListBtn').addEventListener('click', function() {
+        location.href = "/students";
+    });
+</script>
+
+</body>
+</html>

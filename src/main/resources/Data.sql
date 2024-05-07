@@ -63,7 +63,6 @@ INSERT INTO apply (student_id, subject_id) VALUES
 ('20241103', 5);
 
 
-
 INSERT INTO grade (student_id, subject_id, score, grade, complete) VALUES
 ('20241101', 1, 80, 'B', 'P'),
 ('20241102', 2, 90, 'A', 'P'),
