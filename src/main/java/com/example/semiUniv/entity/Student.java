@@ -15,7 +15,7 @@ public class Student {
     private String studentId;
     @Column(length = 15, nullable = false)
     private String studentName;
-    @Column(length = 8)
+    @Column(length = 10)
     private String birth;
     private String address;
     @Column(length = 13, nullable = false)

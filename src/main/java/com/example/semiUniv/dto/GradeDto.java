@@ -9,7 +9,7 @@ import lombok.Data;
 public class GradeDto {
     private Long gradeId;
     private String studentId;
-    private String subjectName;
+    private String subjectId;
     private int score;
     private String grade;
     private String complete;
@@ -20,14 +20,14 @@ public class GradeDto {
     public static GradeDto fromGradeEntity(Grade grade){
         String strComplete = String.valueOf(grade.getComplete());
         return new GradeDto(grade.getGradeId(),
-                grade.getStudentId(),grade.getSubjectName(),
+                grade.getStudentId(),grade.getSubjectId(),
                 grade.getScore(),grade.getGrade(), strComplete);
     }
     public Grade fromGradeDto(GradeDto gradeDto){
         Grade grade = new Grade();
         grade.setGradeId(gradeDto.getGradeId());
         grade.setStudentId(gradeDto.getStudentId());
-        grade.setSubjectName(gradeDto.getSubjectName());
+        grade.setSubjectId(gradeDto.getSubjectId());
         grade.setScore(gradeDto.getScore());
         grade.setGrade(gradeDto.getGrade());
         grade.setComplete(Complete.valueOf(gradeDto.getComplete()));

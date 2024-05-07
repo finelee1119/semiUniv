@@ -8,12 +8,12 @@ import lombok.Data;
 @Data
 public class Grade {
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long gradeId;
     @Column(nullable = false)
     private String studentId;
     @Column(nullable = false)
-    private String subjectName;
+    private String subjectId;
     private int score;
     private String grade;
     @Enumerated(EnumType.STRING)

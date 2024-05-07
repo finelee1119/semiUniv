@@ -8,12 +8,12 @@ import java.time.LocalTime;
 @Data
 public class Subject {
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long subjectId;
     @Column(nullable = false)
     private String subjectName;
-    private String teacherName; //nullable 조건 삭제
-    private String classRoom;
+    private String teacherId; //nullable 조건 삭제
+    private int classRoom;
     @Enumerated(EnumType.STRING)
     private Week day;
     private LocalTime startTime;

@@ -14,8 +14,8 @@ import java.time.LocalTime;
 public class SubjectDto {
     private Long subjectId;
     private String subjectName;
-    private String teacherName;
-    private String classRoom;
+    private String teacherId;
+    private int classRoom;
     private String day;
     private LocalTime startTime;
     private LocalTime endTime;
@@ -24,7 +24,7 @@ public class SubjectDto {
 
     public static SubjectDto fromSubjectEntity(Subject subject){
         return new SubjectDto(subject.getSubjectId(), subject.getSubjectName(),
-                subject.getTeacherName(), subject.getClassRoom(),
+                subject.getTeacherId(), subject.getClassRoom(),
                 String.valueOf(subject.getDay()), subject.getStartTime(), subject.getEndTime(),
                 subject.getMaxStudent(), subject.getCredit());
     }
@@ -33,7 +33,7 @@ public class SubjectDto {
         Subject subject = new Subject();
         subject.setSubjectId(subjectDto.getSubjectId());
         subject.setSubjectName(subjectDto.getSubjectName());
-        subject.setTeacherName(subjectDto.getTeacherName());
+        subject.setTeacherId(subjectDto.getTeacherId());
         subject.setClassRoom(subjectDto.getClassRoom());
         subject.setDay(Week.valueOf(subjectDto.getDay()));
         subject.setStartTime(subjectDto.getStartTime());
