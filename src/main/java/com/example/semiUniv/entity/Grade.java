@@ -15,7 +15,7 @@ public class Grade {
     @Column(nullable = false)
     private String studentId;
     @Column(nullable = false)
-    private String subjectId;
+    private Long subjectId;
     private int score;
     private String grade;
     @Enumerated(EnumType.STRING)

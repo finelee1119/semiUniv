@@ -10,12 +10,12 @@ import lombok.NoArgsConstructor;
 public class GradeDto {
     private Long gradeId;
     private String studentId;
-    private String subjectId;
+    private Long subjectId;
     private int score;
     private String grade;
     private String complete;
 
-    public GradeDto(Long gradeId, String studentId, String subjectName, int score, String grade, String strComplete) {
+    public GradeDto(Long gradeId, String studentId, Long subjectName, int score, String grade, String strComplete) {
     }
 
     public static GradeDto fromGradeEntity(Grade grade){
