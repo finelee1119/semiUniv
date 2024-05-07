@@ -34,7 +34,7 @@ VALUES
 
 
 
-INSERT INTO Subject (subject_name, teacher_id, class_room, day, start_time, end_time, max_student, credit)
+INSERT INTO subject (subject_name, teacher_id, class_room, day, start_time, end_time, max_student, credit)
 VALUES
 ('컴퓨터 구조', 'A23753', 101, 'MON', '09:00:00', '11:00:00', 25, 3),
 ('알고리즘', 'A24502', 102, 'TUE', '10:00:00', '12:00:00', 25, 3),
@@ -56,3 +56,15 @@ VALUES
 ('프로그래밍 언어', 'A62543', 203, 'WED', '10:00:00', '12:00:00', 30, 3),
 ('시스템 분석', 'A43457', 204, 'THU', '14:00:00', '12:00:00', 30, 3),
 ('게임 프로그래밍', 'A30253', 205, 'FRI', '10:00:00', '12:00:00', 30, 3);
+
+INSERT INTO apply (student_id, subject_id) VALUES
+('20241101', 1),
+('20241102', 2),
+('20241103', 5);
+
+
+
+INSERT INTO grade (student_id, subject_id, score, grade, complete) VALUES
+('20241101', 1, 80, 'B', 'P'),
+('20241102', 2, 90, 'A', 'P'),
+('20241103', 5, 40, 'F', 'NP');

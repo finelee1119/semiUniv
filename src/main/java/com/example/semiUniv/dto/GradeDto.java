@@ -4,6 +4,7 @@ import com.example.semiUniv.constant.Complete;
 import com.example.semiUniv.entity.Grade;
 import lombok.AllArgsConstructor;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 
 @Data
 public class GradeDto {
