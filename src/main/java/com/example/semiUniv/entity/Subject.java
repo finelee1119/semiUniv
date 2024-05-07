@@ -13,7 +13,7 @@ public class Subject {
     @Column(nullable = false)
     private String subjectName;
     private String teacherId; //nullable 조건 삭제
-    private String classRoom;
+    private int classRoom;
     @Enumerated(EnumType.STRING)
     private Week day;
     private LocalTime startTime;

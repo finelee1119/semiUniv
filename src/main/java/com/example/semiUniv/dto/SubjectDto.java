@@ -15,7 +15,7 @@ public class SubjectDto {
     private Long subjectId;
     private String subjectName;
     private String teacherId;
-    private String classRoom;
+    private int classRoom;
     private String day;
     private LocalTime startTime;
     private LocalTime endTime;
