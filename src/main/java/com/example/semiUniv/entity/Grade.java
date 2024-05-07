@@ -8,8 +8,6 @@ import lombok.NoArgsConstructor;
 
 @Entity
 @Data
-@AllArgsConstructor
-@NoArgsConstructor
 public class Grade {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)

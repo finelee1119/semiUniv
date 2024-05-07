@@ -12,8 +12,6 @@ import java.time.LocalDate;
 
 @Entity
 @Data
-@AllArgsConstructor
-@NoArgsConstructor
 public class Student {
     @Id
     private String studentId;

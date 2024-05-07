@@ -10,8 +10,6 @@ import lombok.NoArgsConstructor;
 import java.time.LocalDate;
 @Entity
 @Data
-@AllArgsConstructor
-@NoArgsConstructor
 public class Teacher {
     @Id
     private String teacherId;
