@@ -13,7 +13,7 @@ public class Teacher {
     private String teacherId;
     @Column(nullable = false)
     private String teacherName;
-    @Column(length = 8)
+    @Column(length = 10)
     private String birth;
     private String address;
     @Column(nullable = false)
