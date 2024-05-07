@@ -2,7 +2,9 @@ package com.example.semiUniv.entity;
 
 import com.example.semiUniv.constant.Complete;
 import jakarta.persistence.*;
+import lombok.AllArgsConstructor;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 
 @Entity
 @Data
